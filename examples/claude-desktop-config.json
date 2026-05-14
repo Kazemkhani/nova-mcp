@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "nova": {
+      "command": "npx",
+      "args": ["-y", "@novalabs/nova-mcp"],
+      "env": {
+        "NOVA_API_KEY": "sk_live_REPLACE_ME"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@novalabs/nova-mcp",
+  "version": "0.1.0",
+  "description": "Official Model Context Protocol (MCP) server for NOVA Labs. Lets AI agents create voice agents, start outbound calls, and fetch call transcripts via the NOVA API.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nova-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "test": "node --test --experimental-test-module-mocks dist/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anthropic",
+    "claude",
+    "voice-ai",
+    "sales-agent",
+    "nova-labs",
+    "uae",
+    "dubai",
+    "outbound-calling",
+    "sales-automation"
+  ],
+  "author": "NOVA Labs <ceo@novalabs.ae> (https://novalabs.ae)",
+  "homepage": "https://novalabs.ae",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazemkhani/nova-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kazemkhani/nova-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "typescript": "^5.4.0"
+  }
+}
