@@ -1,45 +1,63 @@
 {
-  "name": "@novalabs/nova-mcp",
-  "version": "0.1.0",
-  "description": "Official Model Context Protocol (MCP) server for NOVA Labs. Lets AI agents create voice agents, start outbound calls, and fetch call transcripts via the NOVA API.",
+  "name": "nova-mcp",
+  "version": "1.0.0",
+  "description": "Official Model Context Protocol (MCP) server for NOVA Labs — place AI voice-agent calls, track them, read quality scores, and manage webhooks via the NOVA API.",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "default": "./dist/server.js"
+    }
+  },
   "bin": {
     "nova-mcp": "dist/index.js"
   },
   "files": [
     "dist",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
+    "build": "tsc -p tsconfig.build.json",
+    "watch": "tsc -p tsconfig.build.json --watch",
     "start": "node dist/index.js",
-    "dev": "tsc && node dist/index.js",
-    "lint": "eslint src --ext .ts",
-    "test": "node --test --experimental-test-module-mocks dist/*.test.js"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run smoke",
+    "prepublishOnly": "npm run verify",
+    "prepare": "npm run build"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.17"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
+    "mcp-server",
     "anthropic",
     "claude",
     "voice-ai",
+    "voice-agent",
     "sales-agent",
     "nova-labs",
-    "uae",
-    "dubai",
     "outbound-calling",
-    "sales-automation"
+    "sales-automation",
+    "uae",
+    "dubai"
   ],
   "author": "NOVA Labs <ceo@novalabs.ae> (https://novalabs.ae)",
-  "homepage": "https://novalabs.ae",
+  "homepage": "https://github.com/Kazemkhani/nova-mcp#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kazemkhani/nova-mcp.git"
@@ -47,12 +65,19 @@
   "bugs": {
     "url": "https://github.com/Kazemkhani/nova-mcp/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "zod": "^3.23.0"
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/node": "^20.12.0",
-    "typescript": "^5.4.0"
+    "@eslint/js": "^9.39.0",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.39.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^4.1.8"
   }
 }
