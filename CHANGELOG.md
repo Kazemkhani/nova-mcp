@@ -17,6 +17,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: 
 - Updated the Model Context Protocol SDK and transitive dependency lockfile;
   `npm audit` now reports zero known vulnerabilities.
 - CI and package support now target the maintained Node.js 22 and 24 LTS lines.
+- CI now runs once per pull request, uses current official GitHub Actions, and
+  cancels superseded runs on the same ref.
+- The MCP handshake, CLI, and HTTP user agent now share one runtime version,
+  guarded against package-version drift by an automated test.
 
 ## [1.0.0] - 2026-06-12
 
