@@ -13,9 +13,10 @@ import {
   httpErrorMessage,
   networkErrorMessage,
 } from "./errors.js";
+import { VERSION } from "./version.js";
 
 export const USER_AGENT =
-  "nova-mcp/1.0.0 (+https://github.com/Kazemkhani/nova-mcp)";
+  `nova-mcp/${VERSION} (+https://github.com/Kazemkhani/nova-mcp)`;
 
 /** Statuses worth one retry on idempotent (GET) requests. */
 const RETRYABLE_STATUSES = new Set([502, 503, 504]);
