@@ -5,7 +5,7 @@
 [![CI](https://github.com/Kazemkhani/nova-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Kazemkhani/nova-mcp/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/nova-mcp)](https://www.npmjs.com/package/nova-mcp)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![node >= 18.17](https://img.shields.io/badge/node-%3E%3D18.17-brightgreen)](https://nodejs.org)
+[![node >= 22](https://img.shields.io/badge/node-%3E%3D22-brightgreen)](https://nodejs.org)
 [![MCP](https://img.shields.io/badge/protocol-MCP-purple)](https://modelcontextprotocol.io)
 
 Claude (or any MCP client) reads your CRM, decides who to call, and NOVA's AI
@@ -190,7 +190,7 @@ npm run verify   # lint + typecheck + test (47 tests) + build + stdio smoke test
 
 - **TypeScript strict** (`noUncheckedIndexedAccess`, `noImplicitOverride`, …)
 - **Tests**: vitest, network fully mocked; tools tested through a real MCP client over an in-memory transport
-- **CI**: GitHub Actions on every push/PR (Node 20 + 22)
+- **CI**: GitHub Actions on every push/PR (maintained Node 22 + 24 LTS lines)
 - **Smoke test**: boots the built binary over real stdio and asserts the handshake + tool count
 
 ### Releasing to npm

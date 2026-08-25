@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible problem in nova-mcp
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve nova-mcp. Remove all credentials, phone numbers, transcripts, and customer data before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: nova-mcp version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Claude Code
+        - Claude Desktop
+        - Cursor
+        - MCP Inspector
+        - Custom client
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest safe sequence that reproduces the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, phone numbers, transcripts, and customer data.
+          required: true
+        - label: This is not a security vulnerability. I will use SECURITY.md for vulnerabilities.
+          required: true
+

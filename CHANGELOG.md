@@ -3,6 +3,19 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: [SemVer](https://semver.org).
 
+## [Unreleased]
+
+### Added
+
+- Contribution, security, and conduct policies plus structured issue and pull
+  request templates.
+
+### Changed
+
+- Updated the Model Context Protocol SDK and transitive dependency lockfile;
+  `npm audit` now reports zero known vulnerabilities.
+- CI and package support now target the maintained Node.js 22 and 24 LTS lines.
+
 ## [1.0.0] - 2026-06-12
 
 First production-grade release. The server now targets the **real**

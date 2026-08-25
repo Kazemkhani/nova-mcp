@@ -39,7 +39,7 @@
     "prepare": "npm run build"
   },
   "engines": {
-    "node": ">=18.17"
+    "node": ">=22"
   },
   "keywords": [
     "mcp",
@@ -69,7 +69,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
