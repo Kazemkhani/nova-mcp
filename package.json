@@ -1,6 +1,6 @@
 {
   "name": "nova-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Model Context Protocol (MCP) server for NOVA Labs — place AI voice-agent calls, track them, read quality scores, and manage webhooks via the NOVA API.",
   "license": "MIT",
   "type": "module",

@@ -5,6 +5,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: 
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-08-25
+
 ### Added
 
 - Contribution, security, and conduct policies plus structured issue and pull

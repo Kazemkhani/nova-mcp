@@ -9,9 +9,10 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { NovaClient } from "./client.js";
 import type { NovaConfig } from "./config.js";
 import { registerTools } from "./tools.js";
+import { VERSION } from "./version.js";
 
 export const SERVER_NAME = "nova-mcp";
-export const SERVER_VERSION = "1.0.0";
+export const SERVER_VERSION = VERSION;
 
 export interface BuildServerOptions {
   /** Injectable fetch for tests. */
